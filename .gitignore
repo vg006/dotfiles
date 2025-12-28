@@ -5,6 +5,7 @@ dconf
 gh
 github-copilot
 go
+!.nixos/temp/go
 Google
 libreoffice
 pulse
