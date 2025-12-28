@@ -88,6 +88,9 @@ in
 
   hardware = {
     nvidia-container-toolkit.enable = true;
+    nvidia = {
+      open = true;
+    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;

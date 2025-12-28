@@ -1,4 +1,4 @@
-{ config, libs, pkgs }:
+{ config, lib, pkgs, ... }:
 {
   services = {
     openssh = {
@@ -22,6 +22,7 @@
       enable = true;
       wayland = true;
     };
+    xserver.videoDrivers = [ "nvidia" ]; 
     blueman.enable = true;
     dbus.packages = [
       pkgs.mako
