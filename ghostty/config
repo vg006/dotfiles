@@ -1,0 +1,30 @@
+# General settings
+
+confirm-close-surface = false
+quit-after-last-window-closed = false
+background = #0d1117
+background-opacity = 0.5
+background-blur = 80
+window-decoration = none
+gtk-tabs-location = hidden
+
+# Keybinds
+
+keybind = alt+q=close_surface
+keybind = alt+n>l=new_split:right
+keybind = alt+n>h=new_split:left
+keybind = alt+n>j=new_split:down
+keybind = alt+n>k=new_split:up
+keybind = alt+enter=toggle_split_zoom
+
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+keybind = alt+space>n=new_tab
+keybind = alt+space>o=toggle_tab_overview
+keybind = alt+space>h=previous_tab
+keybind = alt+space>l=next_tab
+keybind = alt+space>1=goto_tab:1
+keybind = alt+space>2=goto_tab:2

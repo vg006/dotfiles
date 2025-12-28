@@ -1,0 +1,43 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle"
+      // "f f": "file_finder::ToggleMenu"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      ";": "command_palette::Toggle",
+      "c": "vim::ToggleComments",
+      "g h": "vim::StartOfLine",
+      "g l": "vim::EndOfLine",
+      "g b": "pane::GoBack",
+      "f f": "file_finder::Toggle",
+      "shift-k": "vim::PageUp",
+      "shift-j": "vim::PageDown",
+      "space d f": [
+        "workspace::SendKeystrokes",
+        "d a f"
+      ],
+      "space d t": [
+        "workspace::SendKeystrokes",
+        "d a t"
+      ]
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "c": "vim::ToggleComments"
+    }
+  }
+]

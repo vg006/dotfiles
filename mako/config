@@ -1,0 +1,14 @@
+anchor=bottom-right
+layer=overlay
+default-timeout=2000
+max-visible=1
+font=Lilex Nerd Font Title-Caps Semi-Bold 13
+outer-margin=10,20,20
+icons=1
+sort=-priority
+background-color=#525252
+border-size=2
+border-color=#12ED2D
+border-radius=15
+text-color=#D8DEE9FF
+text-alignment=center
