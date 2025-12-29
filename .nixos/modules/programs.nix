@@ -33,6 +33,12 @@ in
       enableFishIntegration = true;
       silent = true;
       nix-direnv.enable = true;
+      settings = {
+        global = {
+          disable_stdin = true;
+          hide_env_diff = true;
+        };
+      };
     };
     thunar = {
       enable = true;
