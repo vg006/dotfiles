@@ -82,6 +82,7 @@ in
       unstb.azure-cli
       zip unzip p7zip
       mongosh
+      omnix
 
       # Applications
       unstb.zed-editor
