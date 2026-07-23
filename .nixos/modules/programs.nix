@@ -1,9 +1,10 @@
 { config, lib, pkgs, ...}:
 let
-  unstb = import <unstb> { };
+  unstb = import <nixpkgs> { };
 in
 {
   programs = {
+    regreet.enable = true;
     sway = {
       enable = true;
     };
@@ -13,6 +14,7 @@ in
         x = "exit";
         c = "clear";
         z = "zellij";
+        y = "yazi";
         ze = "zeditor";
       };
       shellAbbrs = {
@@ -68,23 +70,26 @@ in
       swaybg
       swaylock
       swayidle
+      swayimg
       xdg-user-dirs
 
       # CLI Tools
       btop
-      zellij
-      yazi python313Packages.pillow libsixel
+      tmux
+      unstb.yazi python313Packages.pillow libsixel
       vim neovim helix
       wget curl httpie
       fastfetch
       unstb.gh
       unstb.gitui
-      unstb.azure-cli
       zip unzip p7zip
       mongosh
-      omnix
+      zellij
+      ripgrep
+      unstb.worktrunk
 
       # Applications
+      emacs
       unstb.zed-editor
       vscode
       firefox-bin
@@ -93,19 +98,18 @@ in
       auto-cpufreq
       kitty
       wezterm
-      xfce.thunar
+      alacritty
       libreoffice-qt6-fresh
       vlc
+      vscode
+      antigravity
+      opencode
 
       # Others
       nixd
-      cargo
-      unstb.rustc
-      podman-compose
-      policycoreutils
-      libsemanage
-      buildah
       openssl
+      unstb.zathura
+      mpv      
     ];
   };
 }
