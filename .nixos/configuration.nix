@@ -4,12 +4,12 @@
 
 { config, lib, pkgs, ... }:
 let
-  unstb = import <unstb> { };
+  unstb = import <nixpkgs> { };
 in
 {
   imports =
     [ 
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
       ./modules/programs.nix
       ./modules/services.nix
     ];
@@ -60,7 +60,10 @@ in
 
 
   networking = {
-    hostName = "vixos"; 
+    hostName = "vixos";
+    hosts = {
+      "127.0.0.2" = [ "harbor.vixos.local" ];
+    };
     networkmanager.enable = true;  
     firewall.enable = true;
   };
@@ -84,6 +87,9 @@ in
         options = ["NOPASSWD"];
       }];
     }];
+    pki.certificateFiles = [
+      /data/cert/harbor.vixos.local.crt
+    ];
   };
 
   hardware = {
@@ -94,6 +100,11 @@ in
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+      # settings = {
+      #   General = {
+      #     Experimental = true;
+      #   };
+      # };
     };
   };
   
